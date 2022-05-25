@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water wave</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Water </h2>
+        <h2>Water </h2>
+        
+    </div>
+  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background-color: black;
+            position: relative;
+            min-width: 100%;
+            min-height: 100vh;
+        }
+
+        .container{
+            position: relative;
+        }
+         
+         h2{
+           position: absolute;
+           color: black;
+           transform: translate(-50%,-50%);
+          font-size:5rem;
+           /* clip-path: polygon(51% 72%, 62% 72%, 81% 72%, 89% 73% 100%
+           73%, 100% 100%, 0 100% ,0 72%, 15% 72%, 33% 72%); */
+       }
+
+       .container h2:nth-child(1){  
+           color: transparent;
+           -webkit-text-stroke: 2px rgb(79, 111, 252);
+       }
+       .container h2:nth-child(2){
+           
+           color:  rgb(79, 111, 252);
+           animation: animate 5s ease-in-out infinite;  
+       } 
+
+
+       @keyframes animate
+       {
+           0%,100%
+           {
+                clip-path: polygon(44% 57% ,56% 63% ,71% 74%,88% 83%,
+                100% 90%, 100% 100%,0 100%,0 59%, 10% 57%,25% 55%);
+           }
+           50%
+           {
+            clip-path: polygon(61% 60%, 71% 58% , 83% 60%, 91% 64%, 
+            100% 71%, 100% 100% , 0 100%, 0 89%, 18% 83%, 42% 70%);
+               
+            }
+
+       }
+
+    </style>
+</body>
+</html>
